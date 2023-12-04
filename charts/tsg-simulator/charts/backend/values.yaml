@@ -6,7 +6,7 @@ replicaCount: 1
 nameOverride: "tsg-backend"
 fullnameOverride: "tsg-backend"
 image:
-  repository: thiswallz/tsg-backend
+  repository: ghcr.io/thiswallz/tsg-backend
   pullPolicy: Always
   tag: "latest"
 

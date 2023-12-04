@@ -14,7 +14,7 @@ backend:
   replicaCount: 1
 
   image:
-    repository: thiswallz/tsg-backend
+    repository: ghcr.io/thiswallz/tsg-backend
     pullPolicy: Always
 
   imagePullSecrets: []
