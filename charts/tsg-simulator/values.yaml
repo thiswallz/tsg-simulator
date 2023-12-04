@@ -15,7 +15,7 @@ backend:
 
   image:
     repository: ghcr.io/thiswallz/tsg-backend
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
 
   imagePullSecrets: []
 
