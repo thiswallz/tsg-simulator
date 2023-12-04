@@ -6,10 +6,9 @@ replicaCount: 1
 nameOverride: "tsg-backend"
 fullnameOverride: "tsg-backend"
 image:
-  repository: https://github.com/thiswallz/tsg-simulator
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  repository: thiswallz/tsg-backend
+  pullPolicy: Always
+  tag: "latest"
 
 imagePullSecrets: []
 
@@ -29,7 +28,7 @@ springprofile: dev
 podSecurityContext: {}
 
 service:
-  type: LoadBalancer
+  type: NodePort
   port: 8080
 
 autoscaling:
