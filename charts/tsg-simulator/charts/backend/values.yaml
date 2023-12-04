@@ -7,7 +7,7 @@ nameOverride: "tsg-backend"
 fullnameOverride: "tsg-backend"
 image:
   repository: ghcr.io/thiswallz/tsg-backend
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   tag: "latest"
 
 imagePullSecrets: []
