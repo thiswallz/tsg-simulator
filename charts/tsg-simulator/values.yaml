@@ -28,7 +28,7 @@ backend:
     name: ""
 
   service:
-    type: LoadBalancer
+    type: NodePort
     port: 8080
 
   podAnnotations: {}
