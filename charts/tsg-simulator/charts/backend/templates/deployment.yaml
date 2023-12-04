@@ -40,19 +40,16 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
-            - name: metrics
-              containerPort: 8081
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8081
-              scheme: HTTP
-          readinessProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8081
-              scheme: HTTP
+          # livenessProbe:
+          #   httpGet:
+          #     path: /actuator/health/liveness
+          #     port: 8081
+          #     scheme: HTTP
+          # readinessProbe:
+          #   httpGet:
+          #     path: /actuator/health/readiness
+          #     port: 8081
+          #     scheme: HTTP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
