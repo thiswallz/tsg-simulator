@@ -5,6 +5,7 @@ WORKDIR /build
 
 COPY pom.xml .
 COPY tsg-backend tsg-backend
+COPY tsg-core tsg-core
 
 RUN --mount=type=cache,target=/root/.m2 mvn -B clean package -pl :$BUILD_TARGET -am -DskipTests
 
