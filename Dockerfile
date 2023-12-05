@@ -17,7 +17,7 @@ ARG GID=1000
 
 WORKDIR /app
 
-COPY --chmod=755 --from=maven /build/tx-backend/target/tsg-backend-*-exec.jar app.jar
+COPY --chmod=755 --from=maven /build/tx-backend/target/tsg-backend-*.jar app.jar
 
 USER ${UID}:${GID}
 
