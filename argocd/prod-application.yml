@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tsg-backend-dev
+  name: tsg-backend-prod
   namespace: argocd
 spec:
   destination:
@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-      - values-dev.yaml
+      - values-prod.yaml
     path: charts/tsg-simulator/charts/backend
     repoURL: https://github.com/thiswallz/tsg-simulator
     targetRevision: HEAD
