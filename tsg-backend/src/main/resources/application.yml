@@ -1,2 +1,4 @@
 service:
-  message: "Default Message"
+  message: "Default Message port 80"
+server:
+  port: 80
