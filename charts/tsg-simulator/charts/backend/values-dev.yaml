@@ -5,4 +5,4 @@ nameOverride: "tsg-backend-dev"
 fullnameOverride: "tsg-backend-dev"
 service:
   type: NodePort
-  port: 9090
+  port: 8080
