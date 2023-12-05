@@ -8,7 +8,7 @@ fullnameOverride: "tsg-backend"
 image:
   repository: ghcr.io/thiswallz/tsg-backend
   pullPolicy: Always
-  tag: "latest"
+  tag: "main"
 
 imagePullSecrets: []
 
