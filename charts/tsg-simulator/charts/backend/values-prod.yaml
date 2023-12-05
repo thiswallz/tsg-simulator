@@ -6,4 +6,4 @@ fullnameOverride: "tsg-backend-prod"
 springprofile: prod
 service:
   port: 80
-  type: ClusterIP
+  type: LoadBalancer
