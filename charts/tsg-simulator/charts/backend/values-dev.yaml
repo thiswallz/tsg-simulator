@@ -1,5 +1,5 @@
 namespace:
-  name: prod
+  name: dev
 springprofile: dev
 service:
   type: NodePort

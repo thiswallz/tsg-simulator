@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tsg-backend-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values-prod.yaml
+    path: charts/tsg-simulator/charts/backend
+    repoURL: https://github.com/thiswallz/tsg-simulator
+    targetRevision: HEAD
