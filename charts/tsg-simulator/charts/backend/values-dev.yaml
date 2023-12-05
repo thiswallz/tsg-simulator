@@ -1,6 +1,8 @@
 namespace:
   name: dev
 springprofile: dev
+nameOverride: "tsg-backend-dev"
+fullnameOverride: "tsg-backend-dev"
 service:
   type: NodePort
   port: 9090

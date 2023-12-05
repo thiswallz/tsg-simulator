@@ -1,6 +1,8 @@
 namespace:
   name: prod
 replicaCount: 2
+nameOverride: "tsg-backend-prod"
+fullnameOverride: "tsg-backend-prod"
 springprofile: prod
 service:
   port: 80
