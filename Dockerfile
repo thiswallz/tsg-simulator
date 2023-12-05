@@ -10,7 +10,7 @@ COPY tsg-core tsg-core
 RUN --mount=type=cache,target=/root/.m2 mvn -B clean package -pl :$BUILD_TARGET -am -DskipTests
 
 # Copy the jar and build image
-FROM eclipse-temurin:17-jre-alpine@sha256:c26a727c4883eb73d32351be8bacb3e70f390c2c94f078dc493495ed93c60c2f AS tsg-simulator
+FROM eclipse-temurin:17-jre-alpine@sha256:c26a727c4883eb73d32351be8bacb3e70f390c2c94f078dc493495ed93c60c2f AS tsg-backend
 
 ARG UID=10000
 ARG GID=1000
