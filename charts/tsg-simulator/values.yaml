@@ -13,6 +13,8 @@ backend:
   fullnameOverride: "tsg-backend"
   replicaCount: 1
 
+  springprofile: dev
+
   image:
     repository: ghcr.io/thiswallz/tsg-backend
     pullPolicy: Always

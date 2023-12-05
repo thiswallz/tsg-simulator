@@ -1,0 +1,2 @@
+service:
+  message: "Default Message FROM INT"

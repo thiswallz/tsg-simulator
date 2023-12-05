@@ -22,6 +22,3 @@ COPY --chmod=755 --from=maven /build/tsg-backend/target/tsg-backend-*.jar app.ja
 USER ${UID}:${GID}
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
-
-HEALTHCHECK --interval=5m --timeout=3s \
-  CMD curl -f http://localhost:4004/actuator/health || exit 1
