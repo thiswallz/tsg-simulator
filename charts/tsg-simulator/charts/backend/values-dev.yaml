@@ -6,3 +6,5 @@ fullnameOverride: "tsg-backend-dev"
 service:
   type: NodePort
   port: 8080
+image:
+  tag: "bf41adc6981738c64827361f80b8e9afe081380e"
