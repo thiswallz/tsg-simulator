@@ -92,10 +92,6 @@ The project documentation is organized into several sections, each covering diff
 - [TSG Use Cases Documentation](docs/TSG-USE-CASES.md): Provides real-world use cases and examples of how to use the TSG project.
 - [TSG Workflow Documentation](docs/TSG-WORKFLOW.md): Describes the workflow and processes involved in the project.
 
-## Installation
-
-[Include instructions on how to install the project, dependencies, and any prerequisites.]
-
 ## Getting Started
 
 Soon
