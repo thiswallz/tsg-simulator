@@ -2,7 +2,7 @@
   <h1><img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/logo.png" alt="TSG Simulator" style="width:50px;"/>TSG Simulator</h1>
 </div>
 
-Full Name: Troubleshooting Guidance Simulator
+Troubleshooting Guidance Simulator - FOSS (Free and open-source software)
 
 Welcome to the TSG Simulator, an innovative platform designed to transform learning, training, and simulation experiences. Whether you're an educator, developer, or a curious learner, our simulator empowers you to explore, create, and collaborate like never before.
 
