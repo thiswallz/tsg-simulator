@@ -1,4 +1,6 @@
-<h1><img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/logo.png" alt="TSG Simulator" style="width:200px;"/>TSG Simulator</h1>
+<div style="text-center: center;display: flex; align-items:center;">
+  <h1><img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/logo.png" alt="TSG Simulator" style="width:50px;"/>TSG Simulator</h1>
+</div>
 
 Full Name: Troubleshooting Guidance Simulator
 
