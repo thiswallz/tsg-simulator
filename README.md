@@ -34,7 +34,7 @@ TSG Simulator is a versatile environment that brings a wide range of simulation 
 
 Think of it as the PC building simulator, but for all digital job roles worldwide. Whether you're a coder, sales pro, or computer enthusiast, it's your go-to platform for training, testing, and gaming in the digital realm!
 
-<img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/reference.jpg" />
+<img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/reference.png" />
 
 Image is only reference, will be similar to this, which is coming from a simulator hack game.
 
