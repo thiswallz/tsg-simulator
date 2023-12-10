@@ -1,0 +1,168 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://tsg.com/workflow.schema.json",
+    "title": "Workflow",
+    "description": "The initial workflow schema",
+    "type": "object",
+    "properties": {
+        "title": {
+            "description": "The title of the workflow",
+            "type": "string"
+        },
+        "description": {
+            "description": "The description of the workflow",
+            "type": "string"
+        },
+        "status": {
+            "description": "The status of the workflow",
+            "type": "string",
+            "enum": [
+                "active",
+                "inactive",
+                "archived"
+            ]
+        },
+        "initialDate": {
+            "description": "The initial date of the workflow",
+            "type": "string",
+            "format": "date-time"
+        },
+        "finalDate": {
+            "description": "The final date of the workflow (if any)",
+            "type": "string",
+            "format": "date-time"
+        },
+        "lastMutationUpdate": {
+            "description": "The last update date of the workflow",
+            "type": "string",
+            "format": "date-time"
+        },
+        "miscellaneous": {
+            "description": "The miscellaneous of the workflow like background color, theme, etc.",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "value": {}
+            },
+            "additionalProperties": true
+        },
+        "thresholds": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "array",
+                "items": [
+                    {
+                        "type": "string"
+                    },
+                    {}
+                ],
+                "additionalItems": false
+            },
+            "propertyNames": {
+                "type": "string"
+            }
+        },
+        "variables": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                }
+              },
+              "required": ["id", "title"],
+              "additionalProperties": true
+            }
+        },
+        "goals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "constrain": {
+                  "type": "string",
+                  "description": "Path Validator, the constrain of the goal."
+                }
+              },
+              "required": ["id", "label", "constrain"],
+              "additionalProperties": true
+            }
+        },
+        "solutions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "points": {
+                  "type": "integer"
+                }
+              },
+              "required": ["id", "label"],
+              "additionalProperties": true
+            }
+        },
+        "apps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "category": {
+                    "type": "string",
+                    "enum": [
+                        "system",
+                        "official",
+                        "custom"
+                    ]
+                }
+              },
+              "required": ["id", "label", "category", "icon", "url"],
+              "additionalProperties": true
+            }
+        },
+        "history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": true
+            }
+        }
+    }
+}

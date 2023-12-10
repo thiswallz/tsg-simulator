@@ -15,3 +15,9 @@ management:
       base-path: /actuator
   server:
     port: 8081
+datasource:
+  url: ${SPRING_DATASOURCE_URL}
+  username: ${SPRING_DATASOURCE_USERNAME}
+  password: ${SPRING_DATASOURCE_PASSWORD}
+flyway:
+  locations: /db/migration

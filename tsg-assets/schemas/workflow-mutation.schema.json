@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://tsg.com/workflow-mutation.schema.json",
+    "title": "Workflow Mutation",
+    "description": "The initial workflow mutation schema",
+    "type": "object",
+    "additionalProperties": {
+        "type": "array",
+        "items": [
+            {
+                "type": "string"
+            },
+            {}
+        ],
+        "additionalItems": false
+    },
+    "propertyNames": {
+        "type": "string"
+    }
+}

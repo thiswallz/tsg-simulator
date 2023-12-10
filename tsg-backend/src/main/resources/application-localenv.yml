@@ -1,0 +1,6 @@
+service:
+  message: "Default Message FROM LOCAL 01"
+datasource:
+  url: jdbc:postgresql://localhost:5432/tsg
+  username: admin
+  password: root

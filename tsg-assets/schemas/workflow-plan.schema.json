@@ -1,0 +1,38 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://tsg.com/workflow-plan.schema.json",
+    "title": "Workflow Plan",
+    "description": "The initial workflow plan schema",
+    "type": "object",
+    "properties": {
+        "title": {
+            "description": "The title of the workflow plan",
+            "type": "string"
+        },
+        "description": {
+            "description": "The description of the workflow plan",
+            "type": "string"
+        },
+        "events": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "delay": {
+                    "type": "integer"
+                  },
+                  "mutations": {
+                    "$ref": "./workflow-mutation.schema.json"
+                  }
+                },
+                "required": ["id", "delay"],
+                "additionalProperties": true
+            }
+        }
+
+    }
+
+}
