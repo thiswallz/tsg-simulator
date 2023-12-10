@@ -4,6 +4,9 @@
 
 TSG Simulator is a cutting-edge platform designed for creating, testing, and simulating a wide range of scenarios and workflows. It offers a rich set of features and a robust architecture to meet diverse training and simulation needs.
 
+
+GitOps Repository: [https://github.com/thiswallz/tsg-simulator-deployment](https://github.com/thiswallz/tsg-simulator-deployment)
+
 ## Architecture
 
 - **Container Orchestration:** TSG Simulator runs on Kubernetes, providing scalability, high availability, and easy deployment.
