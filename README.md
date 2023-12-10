@@ -30,6 +30,14 @@ TSG Simulator is a versatile environment that brings a wide range of simulation 
 - **Versatility:** From technical training to real-world tasks, TSG Simulator is adaptable to various industries and use cases, including IT, security, and more.
 
 
+## Image Reference
+
+Think of it as the PC building simulator, but for all digital job roles worldwide. Whether you're a coder, sales pro, or computer enthusiast, it's your go-to platform for training, testing, and gaming in the digital realm!
+
+<img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/reference.webp" />
+
+
+
 ## Key Features
 
 1. **Scalability:** The platform is designed to scale effectively from the beginning to handle growing user bases and demands.
