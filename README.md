@@ -8,6 +8,14 @@ Welcome to the TSG Simulator, an innovative platform designed to transform learn
 
 Discover how TSG Simulator can revolutionize your learning, training, and simulation experiences. Explore, create, and learn in a dynamic and interactive environment.
 
+## Table of Contents
+
+- [Documentation](#documentation)
+- [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
 
 ## What Is TSG Simulator?
 
@@ -59,16 +67,6 @@ TSG Simulator is a versatile environment that brings a wide range of simulation 
 17. **Role-Based Access:** Base roles are defined, granting read or write access to team members within a team.
 
 
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Documentation](#documentation)
-- [Installation](#installation)
-- [Getting Started](#getting-started)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Overview
 
 The TSG Project is a Platform where you can build and play digital simulations.
@@ -92,7 +90,7 @@ The project documentation is organized into several sections, each covering diff
 
 ## Getting Started
 
-[Provide a guide on getting started with the project, including basic usage and configuration.]
+Soon
 
 ## Contributing
 
