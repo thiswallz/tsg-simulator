@@ -1,6 +1,6 @@
 # TSG Project Readme
 
-Full Name: Troubleshooting Solution Guidance Simulator
+Full Name: Troubleshooting Guidance Simulator
 
 Welcome to the TSG Project! This README provides an overview of the project and links to detailed documentation.
 
