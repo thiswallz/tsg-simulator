@@ -13,6 +13,10 @@
             "description": "The description of the workflow",
             "type": "string"
         },
+        "loading": {
+            "description": "The loading of the workflow",
+            "type": "boolean"
+        },
         "status": {
             "description": "The status of the workflow",
             "type": "string",
