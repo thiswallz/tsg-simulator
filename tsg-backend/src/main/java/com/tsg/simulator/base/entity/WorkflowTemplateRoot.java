@@ -20,8 +20,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "workflow_template_root")
 public class WorkflowTemplateRoot implements Serializable {
     @Id
-    @Column(name = "uuid")
-    private String uuid;
+    @Column(name = "id")
+    private String id;
     @Column(name = "name")
     private String name;
     @Column(name = "description")
