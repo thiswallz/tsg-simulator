@@ -17,27 +17,6 @@ Discover how TSG Simulator can revolutionize your learning, training, and simula
 - [License](#license)
 
 
-## What Is TSG Simulator?
-
-TSG Simulator is a versatile environment that brings a wide range of simulation scenarios to life. It offers a dynamic and immersive platform for:
-
-- **Learning and Training:** Dive into realistic troubleshooting, development, and problem-solving scenarios. Enhance your skills through hands-on experiences.
-
-- **Collaboration:** Engage in collaborative workflows with team members, taking on different roles in agile processes like Scrum.
-
-- **Customization:** Tailor simulations to your unique needs. Write code, upload documents, and create dynamic workflows effortlessly.
-
-- **Versatility:** From technical training to real-world tasks, TSG Simulator is adaptable to various industries and use cases, including IT, security, and more.
-
-
-## Image Reference
-
-Think of it as the PC building simulator, but for all digital job roles worldwide. Whether you're a coder, sales pro, or computer enthusiast, it's your go-to platform for training, testing, and gaming in the digital realm!
-
-<img src="https://raw.githubusercontent.com/thiswallz/tsg-simulator/main/assets/reference.png" />
-
-Image is only reference, will be similar to this, which is coming from a simulator hack game.
-
 ## Key Features
 
 1. **Scalability:** The platform is designed to scale effectively from the beginning to handle growing user bases and demands.

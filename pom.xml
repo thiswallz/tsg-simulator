@@ -15,9 +15,11 @@
         <springboot.version>3.1.6</springboot.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
         <spring-core.version>6.0.14</spring-core.version>
+        <swagger-annotation.version>1.6.12</swagger-annotation.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-	</properties>
+        <lombok.version>1.18.28</lombok.version>
+    </properties>
 
     <modules>
         <module>tsg-backend</module>
