@@ -17,4 +17,8 @@ public class SeedService {
     List<Seed> findAll() {
         return repo.findAll();
     }
+
+    Seed save(Seed seed) {
+        return repo.save(seed);
+    }
 }

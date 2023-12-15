@@ -15,6 +15,8 @@ public class Seed implements Serializable {
     private String name;
     @Column(name = "description")
     private String description;
+    @Column(name = "data", columnDefinition = "json")
+    private String data;
     @Column(name = "creation_time")
     private LocalDateTime creationTime;
 }
