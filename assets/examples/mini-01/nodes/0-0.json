@@ -1,0 +1,153 @@
+[
+  {
+    "type": "event",
+    "delay": 30,
+    "__mutations": [
+      {
+        "app": "emails",
+        "action": "send",
+        "content": {
+          "from": "Bob",
+          "subject": "hi!",
+          "body": "Bob here, I received a weird USB on my desk, can you check it out.",
+          "actions": [
+            {
+              "id": "action-1",
+              "label": "Start right away",
+              "help": "Take Bobs USB drive",
+              "outcome": {
+                "response": "Will take it, I let you know",
+                "__currentTask": "0-0.bob.0"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "app",
+    "app": "hack-scanner",
+    "__currentTask": "0-0.bob.0",
+    "debug": [
+      {
+        "id": "debug-1",
+        "label": "Inspect",
+        "help": "Inspect the USB drive physically",
+        "outcome": "Seems ok (add i18n)"
+      },
+      {
+        "id": "debug-2",
+        "label": "Use X Scanner",
+        "help": "Inspect the USB drive with X Scanner",
+        "outcome": "Not issues found"
+      },
+      {
+        "id": "debug-3",
+        "label": "Plug",
+        "help": "Attempt to plug the USB drive into a computer.",
+        "__outcome": [
+          [
+            "$.history[?(@.id == \"0-0.hack-scanner.debug-1\")]",
+            {
+              "response": "Seems that now works perfectly fine"
+            },
+            {
+              "response": "A new couple of bugs were introduced",
+              "__mutations": [
+                {
+                  "app": "system",
+                  "field": "$.variables[?(@.id == \"bugs\")]",
+                  "action": "add",
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "action-1",
+        "label": "Throw it",
+        "help": "Throw the USB to the trash bin",
+        "__outcome": [
+          [
+            {
+              "operator": "every",
+              "conditions": [
+                "$.history[?(@.id != \"0-0.hack-scanner.debug-1\")]",
+                "$.history[?(@.id != \"0-0.hack-scanner.debug-2\")]"
+              ]
+            },
+            {
+              "id": "outcome-1",
+              "response": "Seems we didnt even check it out...",
+              "__next": "1-0"
+            },
+            {
+              "id": "outcome-2",
+              "response": "Well, at least we checked it out...",
+              "__next": "1-0"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "action-2",
+        "label": "Return it",
+        "help": "USB Seems to be fine, return it to Bob",
+        "__outcome": [
+          [
+            [
+              "$.history[?(@.id == \"0-0.hack-scanner.debug-1\")]",
+              "$.history[?(@.id == \"0-0.hack-scanner.debug-2\")]"
+            ],
+            {
+              "id": "outcome-1",
+              "response": "Cool, I just sent it back to Bob",
+              "__next": "1-0",
+              "__mutations": [
+                {
+                  "app": "system",
+                  "field": "$.variables[?(@.id == \"tickets\")]",
+                  "action": "add",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "id": "outcome-2",
+              "response": "Seems we still need to check it out...",
+              "__next": "1-0"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "type": "beforeNext",
+    "__mutations": [
+      {
+        "type": "condition",
+        "conditions": [
+          "$.history[?(@.id != \"0-0.hack-scanner.action-2.outcome-1\")]",
+          {
+            "app": "system",
+            "field": "$.tasks[?(@.id == \"0-0.bob.0\")]",
+            "action": "set",
+            "value": true
+          },
+          {
+            "app": "system",
+            "field": "$.tasks[?(@.id == \"0-0.bob.0\")]",
+            "action": "set",
+            "value": false
+          }
+        ]
+      }
+    ]
+  }
+]

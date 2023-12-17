@@ -1,0 +1,53 @@
+[
+  {
+    "type": "event",
+    "delay": 10,
+    "__mutations": [
+      {
+        "app": "emails",
+        "action": "send",
+        "from": "Bob",
+        "content": [
+          {
+            "operator": "every",
+            "conditions": [
+              "$.tasks[?(@.id != \"0-0.bob.0\" && @.outcome==true)]"
+            ]
+          },
+          {
+            "subject": "Hi again",
+            "body": "Just wanted to thank you for the help, I really appreciate it."
+          },
+          {
+            "subject": "hi!",
+            "body": "At least you tried."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "event",
+    "delay": 10,
+    "__mutations": [
+      {
+        "app": "emails",
+        "action": "send",
+        "from": "John",
+        "subject": "Goodbye",
+        "body": "Just wanted to thank you for the help, I really appreciate it. I received an email with a link and now the computer stopped working.",
+        "actions": [
+          {
+            "id": "action-1",
+            "label": "Start right away",
+            "help": "Take the task",
+            "outcome": {
+              "response": "Ill let you know when I'm done.",
+              "__currentTask": "0-1.john.0"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

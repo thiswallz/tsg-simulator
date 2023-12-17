@@ -1,0 +1,12 @@
+{
+  "id": "hack-scanner",
+  "name": "Hack Scanner",
+  "description": "Scan your code for potential security vulnerabilities",
+  "logo": "https://placehold.co/100x100",
+  "overlayConfig": "40%|%60",
+  "type": "overlay",
+  "content": {
+    "terminal": "",
+    "actions": []
+  }
+}

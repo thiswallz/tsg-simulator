@@ -1,0 +1,79 @@
+{
+  "$schema": "https://tsg-simulator.com/seed.schema.json",
+  "name": "TSG Simulator - Mini 001",
+  "description": "Scenario to troubleshoot common problems on Company-X",
+  "processing": false,
+  "status": "active",
+  "version": "1.0.0",
+  "profile": {
+    "user": "",
+    "label": "Score",
+    "value": 0
+  },
+  "miscellaneous": {
+    "logo": "https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png"
+  },
+  "thresholds": [
+    {
+      "name": "Score",
+      "levels": [
+        {
+          "label": "low",
+          "description": "Low score",
+          "constrain": "$.variables[?(@.id == \"tickets\" && @.value < 1)]"
+        },
+        {
+          "label": "medium",
+          "description": "Medium score",
+          "constrain": "$.variables[?(@.id == \"tickets\" && @.value > 0 && @.value < 2)]"
+        },
+        {
+          "label": "high",
+          "description": "High score",
+          "constrain": "$.variables[?(@.id == \"tickets\" && @.value > 2)]"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "id": "tickets",
+      "label": "Tickets",
+      "description": "Tickets fixed in the company",
+      "value": 0,
+    },
+    {
+      "id": "bugs",
+      "label": "Bugs",
+      "description": "Bugs found on the system",
+      "value": 0,
+    },
+    {
+      "id": "reputation",
+      "label": "Reputation",
+      "description": "My reputation score",
+      "value": 5,
+    }
+  ],
+  "currentTask": {
+    "id": null,
+    "label": "No task"
+  },
+  "tasks": [
+    {
+      "id": "0.0.init.0",
+      "metadata": {
+        "from": "system"
+      },
+      "outcome": true
+    }
+  ],
+  "installedApps": [
+    "emails",
+    "tsg",
+  ],
+  "storeApps": [
+    "hack-scanner"
+  ],
+  "history": []
+}
