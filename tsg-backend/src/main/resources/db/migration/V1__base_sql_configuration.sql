@@ -4,7 +4,17 @@ CREATE TABLE public.seed (
     ),
     name varchar (255) NULL,
     description varchar (1000) NULL,
-    data json NOT NULL,
+    base json NOT NULL,
     creation_time timestamp NULL,
     CONSTRAINT seed_pkey PRIMARY KEY (id)
 );
+
+CREATE TABLE public.seed_nodes (
+    id serial PRIMARY KEY,
+    seed_id int8 NOT NULL,
+    node_key varchar(255) NOT NULL,
+    node_data json NOT NULL,
+    CONSTRAINT fk_seed FOREIGN KEY (seed_id) REFERENCES public.seed (id) ON DELETE CASCADE
+);
+
+-- TODO improve to jsonb

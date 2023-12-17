@@ -40,19 +40,19 @@
       "id": "tickets",
       "label": "Tickets",
       "description": "Tickets fixed in the company",
-      "value": 0,
+      "value": 0
     },
     {
       "id": "bugs",
       "label": "Bugs",
       "description": "Bugs found on the system",
-      "value": 0,
+      "value": 0
     },
     {
       "id": "reputation",
       "label": "Reputation",
       "description": "My reputation score",
-      "value": 5,
+      "value": 5
     }
   ],
   "currentTask": {
@@ -70,7 +70,7 @@
   ],
   "installedApps": [
     "emails",
-    "tsg",
+    "tsg"
   ],
   "storeApps": [
     "hack-scanner"
