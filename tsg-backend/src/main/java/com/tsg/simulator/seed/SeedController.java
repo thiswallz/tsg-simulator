@@ -1,5 +1,7 @@
 package com.tsg.simulator.seed;
 
+import com.tsg.simulator.nodes.SeedNodes;
+import com.tsg.simulator.nodes.model.SeedNodeMetaDataDto;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,5 +31,11 @@ public class SeedController {
     @GetMapping("/")
     public List<Seed> findAllSeeds() {
         return seedService.findAll();
+    }
+
+    @Operation(summary = "Get list of nodes by its seed id")
+    @GetMapping("/{id}/nodes")
+    public List<SeedNodeMetaDataDto> nodes(@PathVariable Long id) {
+        return seedService.findNodes(id);
     }
 }
