@@ -1,4 +1,4 @@
-package com.tsg.simulator.seed;
+package com.tsg.simulator.nodes;
 
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -8,26 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(path = "/api/seed", produces = "application/json")
+@RequestMapping(path = "/api/seed-nodes", produces = "application/json")
 @RequiredArgsConstructor
-public class SeedController {
-
+public class SeedNodesController {
     @Autowired
-    private SeedService seedService;
+    private SeedNodesService seedNodesService;
 
-    @Operation(summary = "Get a seed by its id")
+    @Operation(summary = "Get a seed node by its id")
     @GetMapping("/{id}")
-    public Optional<Seed> one(@PathVariable Long id) {
-        return seedService.findById(id);
-    }
-
-    @Operation(summary = "Get all seeds")
-    @GetMapping("/")
-    public List<Seed> findAllSeeds() {
-        return seedService.findAll();
+    public Optional<SeedNodes> one(@PathVariable Long id) {
+        return seedNodesService.findById(id);
     }
 }

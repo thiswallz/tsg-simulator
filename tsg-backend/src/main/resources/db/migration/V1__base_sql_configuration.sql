@@ -4,8 +4,7 @@ CREATE TABLE public.seed (
     ),
     name varchar (255) NULL,
     description varchar (1000) NULL,
-    base json NOT NULL,
-    creation_time timestamp NULL,
+    data json NOT NULL,
     CONSTRAINT seed_pkey PRIMARY KEY (id)
 );
 

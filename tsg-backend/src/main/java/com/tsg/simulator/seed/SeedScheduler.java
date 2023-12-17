@@ -12,7 +12,7 @@ public class SeedScheduler {
     @Autowired
     private SimpMessagingTemplate template;
 
-    @Scheduled(fixedRate = 5000) // Schedule the task to run every 5 seconds
+    @Scheduled(fixedRate = 50000) // Schedule the task to run every 5 seconds
     public void runTask() {
         // This will send messages to the client if required
         System.out.println("Task executed at " + new Date());
